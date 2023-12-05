@@ -1,4 +1,4 @@
-const {TouchableHighlight, View, Image, Text} = require('react-native');
+import {TouchableHighlight, View, Image, Text} from 'react-native';
 
 const ContactListItem = ({name, avatar, phone, onPress}) => {
   return (
