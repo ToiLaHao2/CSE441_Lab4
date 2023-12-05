@@ -16,7 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import ContactListItem from './src/Contact';
+import Contacts from './src/Contact';
 import ProfileContact from './src/ProfileContact';
 import Favorites from './src/Favorites';
 import {Provider} from 'react-redux';
@@ -35,7 +35,7 @@ function ContactsScreen() {
       }}>
       <Stack.Screen
         name="Contacts"
-        component={ContactListItem}
+        component={Contacts}
         options={{title: 'Contacts'}}
       />
       <Stack.Screen

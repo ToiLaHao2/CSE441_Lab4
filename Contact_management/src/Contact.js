@@ -18,6 +18,7 @@ const fetchContacts = async () => {
 };
 const Contacts = ({navigation}) => {
   const {contacts} = useSelector(state => state);
+
   const dispatch = useDispatch();
   useEffect(() => {
     fetchContacts()
@@ -26,6 +27,7 @@ const Contacts = ({navigation}) => {
       })
       .catch(e => {});
   }, []);
+
   const renderContacts = ({item}) => {
     const {name, avatar, phone} = item;
     return (
@@ -37,5 +39,14 @@ const Contacts = ({navigation}) => {
       />
     );
   };
+  return (
+    <View>
+      <FlatList
+        data={contacts}
+        keyExtractor={keyExtractor}
+        renderItem={renderContacts}
+      />
+    </View>
+  );
 };
 export default Contacts;
